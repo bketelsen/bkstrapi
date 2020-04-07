@@ -1,0 +1,46 @@
+{
+  "name": "TODO",
+  "description": "TODO",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "sapper dev",
+    "build": "sapper build --legacy",
+    "export": "sapper export --legacy",
+    "start": "node __sapper__/build",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run",
+    "lambda:test": "netlify-lambda serve src/functions"
+  },
+  "dependencies": {
+    "apollo-boost": "^0.3.1",
+    "apollo-client": "^2.5.1",
+    "apollo-datasource-rest": "^0.3.2",
+    "apollo-server-lambda": "^2.4.8",
+    "compression": "^1.7.1",
+    "graphql": "^14.2.1",
+    "marked": "^0.8.2",
+    "netlify-lambda": "^1.4.5",
+    "polka": "^0.5.0",
+    "reading-time": "^1.2.0",
+    "sirv": "^0.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "chokidar": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^1.0.0",
+    "rollup-plugin-babel": "^4.0.2",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-svelte": "^5.0.1",
+    "rollup-plugin-terser": "^4.0.4",
+    "sapper": "alpha",
+    "svelte": "beta"
+  }
+}
