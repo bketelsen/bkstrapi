@@ -48,7 +48,7 @@ import moment from 'moment';
     {/if}
     <div class="post-item">
       <h2>
-        <a  href="/slides/{pres.slug}.html">{pres.title}</a>
+       <a  href="/presentations/{pres.slug}">{pres.title}</a> 
       </h2>
       <div class="post-item-details">
         <p>{pres.description}</p>
