@@ -53,6 +53,6 @@
   <a rel=prefetch class='{segment === "about" ? "selected" : ""}' href='about'>about</a>
   <a rel=prefetch class='{segment === "projects" ? "selected" : ""}' href='projects'>projects</a>
   <a rel=prefetch class='{segment === "videos" ? "selected" : ""}' href='videos'>videos</a>
-  <!--<a rel=prefetch class='{segment === "presentations" ? "presentations" : ""}' href='presentations'>presentations</a>-->
+  <a rel=prefetch class='{segment === "presentations" ? "presentations" : ""}' href='presentations'>presentations</a>
   <a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a>
 </nav>
