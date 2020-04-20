@@ -1,40 +1,29 @@
-import path from "path";
-  import fs from "fs";
-  import grayMatter from "gray-matter";
-  import marked from "marked";
-
-  const getPage = fileName =>
-    fs.readFileSync(path.resolve("content/pages/", `${fileName}.md`), "utf-8");
-
-  export function get(req, res, next) {
-    const { slug } = req.params;
-
-    // get the markdown text
-    const page = getPage(slug);
+import publication from '../../content/publications/brian.dev/brian.dev.json';
+import urlSlug from 'url-slug';
 
 
+const lookup = new Map();
+publication.pages.forEach(page => {
+	lookup.set(urlSlug(page.slug), JSON.stringify(page));
+});
 
-    // parse the md to get front matter
-    // and the content without escaping characters
-    const { data, content } = grayMatter(page);
+export function get(req, res, next) {
+	// the `slug` parameter is available because
+	// this file is called [slug].json.js
+  const { slug } = req.params;
+	if (lookup.has(slug)) {
+		res.writeHead(200, {
+			'Content-Type': 'application/json'
+		});
 
-    const html = marked(content);
+		res.end(lookup.get(slug));
+	} else {
+		res.writeHead(404, {
+			'Content-Type': 'application/json'
+		});
 
-    if (html) {
-      res.writeHead(200, {
-        "Content-Type": "application/json"
-      });
-
-      res.end(JSON.stringify({ html, ...data }));
-    } else {
-      res.writeHead(404, {
-        "Content-Type": "application/json"
-      });
-
-      res.end(
-        JSON.stringify({
-          message: `Not found`
-        })
-      );
-    }
-  }
+		res.end(JSON.stringify({
+			message: `Not found`
+		}));
+	}
+}

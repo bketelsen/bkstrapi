@@ -18,6 +18,7 @@
   import Bio from "../components/Bio.svelte";
   import Figure from "../components/Figure.svelte";
 
+  import marked from 'marked';
 export let page;
 
 </script>
@@ -48,8 +49,8 @@ export let page;
 <div class="container">
   <h1>{page.title}</h1>
   <Figure
-    source="https://content.brian.dev{page.image.url}"
-    photo_credit={page.image.credit}
-    photo_credit_url={page.image.credit_url} />
-  {@html page.html}
+    source="https://content.brian.dev{page.featured_image.url}"
+    photo_credit={page.photo_credit}
+    photo_credit_url={page.photo_credit_url} />
+  {@html marked(page.content)}
 </div>
