@@ -1,30 +1,24 @@
 <script context="module">
-  import { client, PROJECTS } from "../../lib/apollo";
-  import { gql } from "apollo-boost";
 
-  export async function preload(page) {
-    let { slug } = page.params;
-    return {
-      slug: slug,
-      cache: await client.query({
-        query: PROJECTS
-      })
-    };
-  }
+	export async function preload({ params, query }) {
+		// the `slug` parameter is available because
+		// this file is called [slug].svelte
+		const res = await this.fetch(`projects/${params.slug}.json`);
+		const data = await res.json();
+
+		if (res.status === 200) {
+			return { project: data };
+		} else {
+			this.error(res.status, data.message);
+		}
+	}
+
 </script>
 
 <script>
   import Bio from '../../components/Bio.svelte'
   import marked from 'marked';
-  import { restore, query } from "svelte-apollo";
-  export let cache;
-  export let slug;
-  restore(client, PROJECTS, cache.data);
-  let projects = [];
-  projects = cache.data.projects.filter(function(e) {
-    return e.slug.toLowerCase() === slug.toLowerCase();
-  });
-  let project = projects[0];
+  export let project;
 </script>
 
 <style lang="scss">

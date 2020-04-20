@@ -1,23 +1,13 @@
 <script context="module">
-	import {client, PROJECTS} from "../../lib/apollo";
-  	import { gql } from "apollo-boost";
-
-  	export async function preload() {
-    	return {
-      		cache: await client.query({
-        	query: PROJECTS
-      	})
-    };
-  }
+	export function preload({ params, query }) {
+		return this.fetch(`projects.json`).then(r => r.json()).then(projects => {
+       return {projects};
+		});
+	}
 </script>
 
 <script>
-  import { restore, query } from "svelte-apollo";
-  export let cache;
-  restore(client, PROJECTS, cache.data);
-
-  // query a subset of the preloaded (the rest if for Account)
-  const projects = query(client, { query: PROJECTS });
+  export let projects;
 </script>
 
 <style>
@@ -45,10 +35,10 @@
 
 <div class="container">
   <h1>Projects</h1>
-  {#await $projects}
+  {#await projects}
   <p>loading</p>
   {:then result}
-  {#each result.data.projects as project,index }
+  {#each projects as project,index }
 
     {#if index}
       <hr />

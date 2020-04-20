@@ -31,6 +31,13 @@ axios
 					mode: 0o777
 				}
 			);
+			mkdirSync(
+				__dirname + '/content/publications/' + pub.name.toLowerCase() + '/projects',
+				{
+					recursive: true,
+					mode: 0o777
+				}
+			);
 			writeFileSync(
 				__dirname + '/content/publications/' + pub.name.toLowerCase() + '/' + pub.name.toLowerCase() + '.json',
 				JSON.stringify(pub)
@@ -78,6 +85,22 @@ axios
 				writeFileSync(
 					__dirname + '/content/publications/' + pub.name.toLowerCase() + '/pages/' + slug + '.md',
 					SEPARATOR + '\n' + yamlStr + '\n' + SEPARATOR + '\n\n' + page.content + '\n'
+				)
+			});
+
+			pub.projects.forEach(function (project) {
+				var slug = urlSlug(project.slug);
+				let frontmatter = {
+					title: project.title,
+					slug: slug,
+					github: project.github,
+					description: project.description,
+				};
+
+				let yamlStr = yaml.safeDump(frontmatter);
+				writeFileSync(
+					__dirname + '/content/publications/' + pub.name.toLowerCase() + '/projects/' + slug + '.md',
+					SEPARATOR + '\n' + yamlStr + '\n' + SEPARATOR + '\n\n' + project.content + '\n'
 				)
 			})
 		}
