@@ -49,14 +49,14 @@ I store my code in Windows.  For the past year I treated the WSL filesystem and 
 That meant that my source code was only in WSL's filesystem, and completely invisible to Windows.   In turn, this caused limitations on what I could do with the code.  Because it was only in WSL, I had to operate on the files using either command-line tools, or X Windows tools using an X Client from Windows.  It wasn't a show-stopper, but it was a little awkward.
 
 I don't know why it didn't occur to me before, but I just removed the "--color=auto" settings in my .bashrc last weekend, and suddenly I was perfectly happy looking at files on the Windows filesystem from WSL's bash. ![nouglycolors](https://content.brian.dev/uploads/93b6088ba3b948f2a3c42e0b1ea51bac.png)  No strange colors, no mental block about viewing the files!  This was actually a pretty big turning point for me.  As crazy as it may sound, just removing coloring from my bash prompt unblocked me from using and viewing the Windows filesystem from WSL.  Tiny change, huge mental gain.  I moved my code from WSL to the Windows filesystem:
-```bash
+```
 mv ~/src /mnt/c/projects
 ```
 Then I set my $GOPATH to "/mnt/c/projects" and Go worked beautifully from WSL.  I also installed Go on Windows and set my GOPATH to "C:\projects", which is the same folder.  Now I have one folder accessible to both WSL and Windows. Because Go stores compiled libraries in a folder named after the architecture under "$GOPATH/pkg", I can compile from both Windows and Linux without overwriting any object files or binaries.  
 > That's pretty damn nice.
 
 On the Windows side, I installed Visual Studio Code and set it up to use the Windows installation of Go for all the tooling required by the VSCode plugin for Go.   The only change to my VS Code configuration file was to specify the global $GOPATH:
-```bash
+```
 {
     "go.gopath": "c:\\projects"
 }
@@ -65,7 +65,7 @@ This setup uses the Windows Go installation to do code linting and other nicetie
 
 ### Docker
 I installed Docker for Windows, and installed the "docker" command in WSL.  To let Docker work against the Windows installation, I needed to export "DOCKER_HOST" in my .bashrc
-```bash
+```
 export DOCKER_HOST=tcp://127.0.0.1:2375
 ```
 It's also necessary to tell Docker for Windows to listen on TCP:

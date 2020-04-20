@@ -13,6 +13,11 @@ publish: export
 production: export
 	wrangler publish -e production
 
+.PHONY: content
+
+content:
+	yarn blog
+
 slide:
 	pandoc -t revealjs -s -o output.html input.md -V revealjs-url=/reveal.js -V showNotes=false
 
