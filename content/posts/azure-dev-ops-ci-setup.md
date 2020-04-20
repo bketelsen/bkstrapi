@@ -10,6 +10,8 @@ excerpt: >-
 slug: azure-dev-ops-ci-setup
 image:
   url: /uploads/6655acdb14ab4463939ddf47d92868d4.jpg
+  credit: Azure DevOps CI Setup
+  credit_url: '#'
 
 ---
 

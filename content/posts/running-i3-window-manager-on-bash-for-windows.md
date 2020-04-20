@@ -9,6 +9,8 @@ excerpt: >-
 slug: running-i3-window-manager-on-bash-for-windows
 image:
   url: /uploads/73e40d8764b54ec99bd1292eb59bdc4b.png
+  credit: Running i3 Window Manager on Bash For Windows
+  credit_url: '#'
 
 ---
 

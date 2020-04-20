@@ -28,7 +28,7 @@
   }
 
   figcaption {
-    font-size: .8em;
+    font-size: 0.8em;
     font-style: italic;
   }
 
@@ -71,7 +71,7 @@
   </div>
 
   <figure>
-    <img alt='Brian Ketelsen' src='me.jpg'>
+    <img alt="Brian Ketelsen" src="me.jpg" />
     <figcaption>Brian Ketelsen</figcaption>
   </figure>
 </div>

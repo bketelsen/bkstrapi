@@ -7,6 +7,8 @@ excerpt: |
 slug: sync-err-group
 image:
   url: /uploads/a3382a89193148168be4cf56b5cbc19f.jpg
+  credit: sync.ErrGroup
+  credit_url: '#'
 
 ---
 

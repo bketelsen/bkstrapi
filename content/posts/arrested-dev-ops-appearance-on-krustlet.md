@@ -6,6 +6,8 @@ excerpt: I had a great time on the Arrested DevOps podcast with Bridget Kromhout
 slug: arrested-dev-ops-appearance-on-krustlet
 image:
   url: /uploads/02f8f223e6474aa69c1af7947004213b.png
+  credit: Arrested DevOps Appearance on Krustlet
+  credit_url: '#'
 
 ---
 

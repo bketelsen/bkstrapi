@@ -10,6 +10,8 @@ excerpt: >-
 slug: caddy-and-let-s-encrypt
 image:
   url: /uploads/27a382860fef4a198f01f5a6aba24d57.jpg
+  credit: Caddy and Let's Encrypt
+  credit_url: '#'
 
 ---
 

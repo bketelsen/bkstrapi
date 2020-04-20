@@ -1,37 +1,26 @@
 <script context="module">
-  import { client, PAGES} from "../lib/apollo";
-  import { gql } from "apollo-boost";
+	export async function preload({ params, query }) {
+		// the `slug` parameter is available because
+		// this file is called [slug].svelte
+		const res = await this.fetch(`${params.slug}.json`);
+		const data = await res.json();
 
-  export async function preload(page) {
-    let { slug } = page.params;
-    return {
-      slug: slug,
-      cache: await client.query({
-        query: PAGES
-      })
-    };
-  }
+		if (res.status === 200) {
+			return { page: data };
+		} else {
+			this.error(res.status, data.message);
+		}
+	}
 </script>
+
 
 <script>
- import Bio from '../components/Bio.svelte'
-   import Figure from '../components/Figure.svelte'
+  import Bio from "../components/Bio.svelte";
+  import Figure from "../components/Figure.svelte";
 
-  import marked from 'marked';
-  import { restore, query } from "svelte-apollo";
-  export let cache;
-  export let slug;
-
-  restore(client, PAGES, cache.data);
-  let pages= [];
-  pages = cache.data.pages.filter(function(e) {
-    return e.slug.toLowerCase() === slug.toLowerCase();
-  });
-  let page = pages[0];
-
+export let page;
 
 </script>
-
 
 <style>
   figure {
@@ -56,9 +45,11 @@
   <title>{page.title} :: Brian Ketelsen</title>
 </svelte:head>
 
-
 <div class="container">
   <h1>{page.title}</h1>
-  <Figure source='https://content.brian.dev{page.featured_image.url}' photo_credit={page.photo_credit} photo_credit_url={page.photo_credit_url}/>
-    {@html marked(page.content)}
+  <Figure
+    source="https://content.brian.dev{page.image.url}"
+    photo_credit={page.image.credit}
+    photo_credit_url={page.image.credit_url} />
+  {@html page.html}
 </div>

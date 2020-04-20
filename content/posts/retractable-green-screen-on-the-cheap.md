@@ -8,6 +8,8 @@ excerpt: >-
 slug: retractable-green-screen-on-the-cheap
 image:
   url: /uploads/d44eca7292c345b9bdbf45055af291bf.jpeg
+  credit: Retractable Green Screen On the Cheap
+  credit_url: '#'
 
 ---
 

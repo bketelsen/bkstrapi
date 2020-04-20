@@ -9,6 +9,8 @@ excerpt: >-
 slug: open-source-appreciation
 image:
   url: /uploads/a307fcab3b2f48629d37a429bbba05d3.jpg
+  credit: Open Source Appreciation
+  credit_url: '#'
 
 ---
 

@@ -9,6 +9,8 @@ excerpt: >-
 slug: new-tricks-notes-as-i-learn-modern-front-end-development
 image:
   url: /uploads/864b0e1dbe2d4997a730e9b6e353b68a.jpg
+  credit: New Tricks - notes as I learn modern front-end development
+  credit_url: '#'
 
 ---
 

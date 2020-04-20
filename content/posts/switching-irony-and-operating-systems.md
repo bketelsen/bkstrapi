@@ -6,6 +6,8 @@ excerpt: 'TLDR; I''ve traded in my Mac on a Surface Pro.  Here''s why:'
 slug: switching-irony-and-operating-systems
 image:
   url: /uploads/491f01dbe9a745aeba4d880c28550af6.png
+  credit: Switching - Irony and Operating Systems
+  credit_url: '#'
 
 ---
 

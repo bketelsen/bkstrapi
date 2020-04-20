@@ -24,5 +24,15 @@
 
 <figure>
     <img src={source} alt={photo_credit}>
-     <figcaption>Photo by <a href={photo_credit_url} target="_blank">{photo_credit}</a></figcaption>
+    {#if photo_credit_url !== "#"}
+     <figcaption>
+      <a href={photo_credit_url} target="_blank">
+        {photo_credit}
+        </a>
+     </figcaption>
+     {:else}
+     <figcaption>
+        {photo_credit}
+     </figcaption>
+     {/if}
 </figure>

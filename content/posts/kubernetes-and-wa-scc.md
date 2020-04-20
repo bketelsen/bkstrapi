@@ -8,6 +8,8 @@ excerpt: >-
 slug: kubernetes-and-wa-scc
 image:
   url: /uploads/0b4909688ebb43b7a8b09ef23f9c4e7e.png
+  credit: Kubernetes and waSCC
+  credit_url: '#'
 
 ---
 

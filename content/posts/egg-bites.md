@@ -8,6 +8,8 @@ excerpt: >
 slug: egg-bites
 image:
   url: /uploads/b90d805ebf904dd09ff2116f5341820c.jpeg
+  credit: Egg Bites
+  credit_url: '#'
 
 ---
 

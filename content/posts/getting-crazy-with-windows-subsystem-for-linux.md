@@ -12,6 +12,8 @@ excerpt: >-
 slug: getting-crazy-with-windows-subsystem-for-linux
 image:
   url: /uploads/f51e0f5db0fe489db7031d4050dd1863.png
+  credit: Getting Crazy with Windows Subsystem for Linux
+  credit_url: '#'
 
 ---
 

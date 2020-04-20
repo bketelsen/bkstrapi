@@ -10,6 +10,8 @@ excerpt: >-
 slug: remote-ssh-connections-to-wsl2
 image:
   url: /uploads/d98ef5c6cff646dcb140dae212aacbba.jpg
+  credit: Remote SSH Connections to WSL2
+  credit_url: '#'
 
 ---
 

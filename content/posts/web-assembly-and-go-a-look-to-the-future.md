@@ -13,6 +13,8 @@ excerpt: >
 slug: web-assembly-and-go-a-look-to-the-future
 image:
   url: /uploads/af6667687c5c4ace86bf242fdb3d1e8c.png
+  credit: 'Web Assembly and Go: A look to the future'
+  credit_url: '#'
 
 ---
 

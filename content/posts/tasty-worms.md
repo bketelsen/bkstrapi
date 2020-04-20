@@ -8,6 +8,8 @@ excerpt: >-
 slug: tasty-worms
 image:
   url: /uploads/15b96fc0d84a4c44b13ecb42d40ba1dc.jpg
+  credit: Tasty Worms
+  credit_url: '#'
 
 ---
 

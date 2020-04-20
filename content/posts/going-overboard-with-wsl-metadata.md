@@ -6,6 +6,8 @@ excerpt: Going a bit overboard with WSL
 slug: going-overboard-with-wsl-metadata
 image:
   url: /uploads/78ecc62784e840cea188a734caae4cc7.PNG
+  credit: Going Overboard with WSL metadata
+  credit_url: '#'
 
 ---
 

@@ -10,6 +10,8 @@ excerpt: >-
 slug: byobu-on-wsl
 image:
   url: /uploads/9e06273c9ca041cabe7c91d3c1e56698.jpg
+  credit: Byobu on WSL
+  credit_url: '#'
 
 ---
 

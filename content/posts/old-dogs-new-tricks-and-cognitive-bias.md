@@ -11,6 +11,8 @@ excerpt: >-
 slug: old-dogs-new-tricks-and-cognitive-bias
 image:
   url: /uploads/4bf3e0a2fedc4f02afdd996aea3daf8f.jpg
+  credit: 'Old Dogs, New Tricks, and Cognitive Bias'
+  credit_url: '#'
 
 ---
 

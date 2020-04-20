@@ -13,6 +13,8 @@ excerpt: >-
 slug: my-cross-platform-dev-setup-on-surface-laptop
 image:
   url: /uploads/32f178dad7c94e5bb78194a83bd316db.png
+  credit: My Cross-Platform Dev Setup on Surface Laptop
+  credit_url: '#'
 
 ---
 

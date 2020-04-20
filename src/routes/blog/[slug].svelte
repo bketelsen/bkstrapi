@@ -15,19 +15,11 @@
 
 <script>
   import Bio from '../../components/Bio.svelte'
-  import marked from 'marked';
+  import Figure from "../../components/PostFigure.svelte";
+
   import moment from 'moment';
-  import hljs from 'highlight.js';
 
 export let post
-
-
-  // Synchronous highlighting with highlight.js
-  marked.setOptions({
-	  highlight: function (code) {
-		      return hljs.highlightAuto(code).value;
-	}
-  });
 
 
 </script>
@@ -103,12 +95,10 @@ export let post
 <div class="container">
 
   <article class="content">
-
-  <figure>
-    <img src='https://content.brian.dev{post.image.url}' alt='{post.title}`'>
-    <figcaption>{post.title}</figcaption>
-  </figure>
-    {@html marked(post.html)}
+  <Figure
+    source="https://content.brian.dev{post.image.url}"
+    alt={post.title} />
+    {@html post.html}
   </article>
   <hr />
   <Bio />

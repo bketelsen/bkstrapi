@@ -9,6 +9,8 @@ excerpt: >-
 slug: windows-for-open-source-development
 image:
   url: /uploads/dcfd43df952b4874ace2f154c45cc82f.jpg
+  credit: Windows for Open Source Development
+  credit_url: '#'
 
 ---
 
