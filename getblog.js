@@ -18,12 +18,19 @@ axios
 			var slug = urlSlug(post.slug);
 			console.log(slug);
 			let frontmatter = {
-				title: post.title
+				title: post.title,
+				date: post.published_at,
+				draft: !post.live,
+				excerpt: post.excerpt,
+				slug: slug,
+				image: {
+					url: post.image.url
+				}
 			};
 
 			let yamlStr = yaml.safeDump(frontmatter);
 			writeFileSync(
-				__dirname + '/static/posts/' + slug.toLowerCase() + '.md',
+				__dirname + '/content/posts/' + slug.toLowerCase() + '.md',
 				SEPARATOR + '\n' + yamlStr + '\n' + SEPARATOR + '\n\n' + post.content + '\n'
 			)
 		}

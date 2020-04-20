@@ -1,27 +1,11 @@
 <script context="module">
-  import { client, ARTICLES } from "../../lib/apollo";
-  import { gql } from "apollo-boost";
-
-  export async function preload() {
-    return {
-      cache: await client.query({
-        query: ARTICLES
-      })
-    };
-  }
+	export function preload({ params, query }) {
+		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
+			return { posts };
+		});
+	}
 </script>
 
-<script>
-  import { restore, query } from "svelte-apollo";
-  import moment from "moment";
-  import marked from "marked";
-
-  export let cache;
-  restore(client, ARTICLES, cache.data);
-
-  // query a subset of the preloaded (the rest if for Account)
-  const articles = query(client, { query: ARTICLES });
-</script>
 
 <style>
   h2,
@@ -41,6 +25,11 @@
     margin: 60px auto;
   }
 </style>
+<script>
+  import marked from 'marked';
+  import moment from 'moment';
+  export let posts;
+</script>
 
 <svelte:head>
   <title>Blog :: Brian Ketelsen</title>
@@ -49,11 +38,11 @@
 <div class="container">
   <h1>Blog</h1>
 
-  {#await $articles}
+  {#await posts}
     <p>loading</p>
 
   {:then result}
-    {#each result.data.articles as article,index }
+    {#each posts as article,index }
     {#if index}
       <hr />
     {/if}
@@ -63,12 +52,11 @@
             {article.title}
           </a>
         </h2>
-        <p>
-          {@html marked(article.excerpt)}
+        <p>{@html marked(article.excerpt)}
         </p>
         <div class="post-item-footer">
           <span class="post-item-date">
-            — {moment(article.published_at).format('MMMM Do, YYYY')}
+            — {moment(article.date).format('MMMM Do, YYYY')}
           </span>
         </div>
       </div>

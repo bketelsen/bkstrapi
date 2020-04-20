@@ -1,35 +1,25 @@
 <script context="module">
-  import { client, ARTICLES } from "../../lib/apollo";
-  
-  import { gql } from "apollo-boost";
+	export async function preload({ params, query }) {
+		// the `slug` parameter is available because
+		// this file is called [slug].svelte
+		const res = await this.fetch(`blog/${params.slug}.json`);
+		const data = await res.json();
 
-  export async function preload(page) {
-    let { slug } = page.params;
-    return {
-      slug: slug,
-      cache: await client.query({
-        query: ARTICLES
-      })
-    };
-  }
+		if (res.status === 200) {
+			return { post: data };
+		} else {
+			this.error(res.status, data.message);
+		}
+	}
 </script>
 
 <script>
   import Bio from '../../components/Bio.svelte'
   import marked from 'marked';
   import moment from 'moment';
-  import { restore, query } from "svelte-apollo";
   import hljs from 'highlight.js';
 
-  export let cache;
-  export let slug;
-  restore(client, ARTICLES, cache.data);
-  let articles = [];
-  articles= cache.data.articles.filter(function(e) {
-    return e.slug.toLowerCase() === slug.toLowerCase();
-  });
-  let post = articles[0];
-
+export let post
 
 
   // Synchronous highlighting with highlight.js
@@ -106,7 +96,7 @@
 </svelte:head>
 
 <header>
-  <p>{moment(post.published_at).format("MMMM Do, YYYY")}</p>
+  <p>{moment(post.date).format("MMMM Do, YYYY")}</p>
   <h1>{post.title}</h1>
   <hr />
 </header>
@@ -118,7 +108,7 @@
     <img src='https://content.brian.dev{post.image.url}' alt='{post.title}`'>
     <figcaption>{post.title}</figcaption>
   </figure>
-    {@html marked(post.content)}
+    {@html marked(post.html)}
   </article>
   <hr />
   <Bio />

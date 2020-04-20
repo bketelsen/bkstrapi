@@ -1,6 +1,7 @@
 import '../static/global.css';
 import { start } from '@sapper/app';
 import { googleAnalytics } from './google-analytics.js';
+import "highlight.js/styles/github.css";
 
 
 start({ target: sapper });
