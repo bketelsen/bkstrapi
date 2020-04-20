@@ -15,6 +15,13 @@ image:
   url: /uploads/af6667687c5c4ace86bf242fdb3d1e8c.png
   credit: 'Web Assembly and Go: A look to the future'
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

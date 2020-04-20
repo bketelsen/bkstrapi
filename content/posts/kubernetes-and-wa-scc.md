@@ -10,6 +10,13 @@ image:
   url: /uploads/0b4909688ebb43b7a8b09ef23f9c4e7e.png
   credit: Kubernetes and waSCC
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

@@ -12,6 +12,13 @@ image:
   url: /uploads/6655acdb14ab4463939ddf47d92868d4.jpg
   credit: Azure DevOps CI Setup
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

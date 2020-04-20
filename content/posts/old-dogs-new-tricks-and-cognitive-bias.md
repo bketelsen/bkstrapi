@@ -13,6 +13,13 @@ image:
   url: /uploads/4bf3e0a2fedc4f02afdd996aea3daf8f.jpg
   credit: 'Old Dogs, New Tricks, and Cognitive Bias'
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

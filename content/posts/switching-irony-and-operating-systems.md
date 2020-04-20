@@ -8,6 +8,13 @@ image:
   url: /uploads/491f01dbe9a745aeba4d880c28550af6.png
   credit: Switching - Irony and Operating Systems
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

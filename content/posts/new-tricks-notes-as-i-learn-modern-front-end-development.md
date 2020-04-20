@@ -11,6 +11,13 @@ image:
   url: /uploads/864b0e1dbe2d4997a730e9b6e353b68a.jpg
   credit: New Tricks - notes as I learn modern front-end development
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

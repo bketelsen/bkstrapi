@@ -11,6 +11,13 @@ image:
   url: /uploads/73e40d8764b54ec99bd1292eb59bdc4b.png
   credit: Running i3 Window Manager on Bash For Windows
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

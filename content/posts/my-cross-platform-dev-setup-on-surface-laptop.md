@@ -15,6 +15,13 @@ image:
   url: /uploads/32f178dad7c94e5bb78194a83bd316db.png
   credit: My Cross-Platform Dev Setup on Surface Laptop
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

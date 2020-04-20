@@ -1,7 +1,7 @@
 <script context="module">
 	export function preload({ params, query }) {
 		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
-			return { posts };
+       return {posts};
 		});
 	}
 </script>
@@ -28,6 +28,8 @@
 <script>
   import marked from 'marked';
   import moment from 'moment';
+  import urlSlug from 'url-slug';
+
   export let posts;
 </script>
 
@@ -48,7 +50,7 @@
     {/if}
       <div class="post-item">
         <h2>
-          <a rel="prefetch" href="blog/{article.slug.toLowerCase()}">
+          <a rel="prefetch" href="blog/{urlSlug(article.slug)}">
             {article.title}
           </a>
         </h2>
@@ -56,7 +58,7 @@
         </p>
         <div class="post-item-footer">
           <span class="post-item-date">
-            — {moment(article.date).format('MMMM Do, YYYY')}
+            — {moment(article.published_at).format('MMMM Do, YYYY')}
           </span>
         </div>
       </div>

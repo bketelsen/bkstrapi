@@ -11,6 +11,13 @@ image:
   url: /uploads/a307fcab3b2f48629d37a429bbba05d3.jpg
   credit: Open Source Appreciation
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

@@ -1,61 +1,29 @@
-import path from "path";
-import fs from "fs";
-import grayMatter from "gray-matter";
-import marked from "marked";
-import hljs from "highlight.js";
+import publication from '../../../content/publications/brian.dev/brian.dev.json';
+import urlSlug from 'url-slug';
 
-import go from "highlight.js/lib/languages/go";
 
-const getPost = fileName =>
-  fs.readFileSync(path.resolve("content/posts/", `${fileName}.md`), "utf-8");
+const lookup = new Map();
+publication.articles.forEach(post => {
+	lookup.set(urlSlug(post.slug), JSON.stringify(post));
+});
 
 export function get(req, res, next) {
+	// the `slug` parameter is available because
+	// this file is called [slug].json.js
   const { slug } = req.params;
+	if (lookup.has(slug)) {
+		res.writeHead(200, {
+			'Content-Type': 'application/json'
+		});
 
-  // get the markdown text
-  const post = getPost(slug);
+		res.end(lookup.get(slug));
+	} else {
+		res.writeHead(404, {
+			'Content-Type': 'application/json'
+		});
 
-  // function that expose helpful callbacks
-  // to manipulate the data before convert it into html
-  const renderer = new marked.Renderer();
-  hljs.registerLanguage('go', go);
-  marked.setOptions({
-    renderer: new marked.Renderer(),
-    highlight: function (code, language) {
-      const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
-      return hljs.highlight(validLanguage, code).value;
-    },
-    pedantic: false,
-    gfm: true,
-    breaks: false,
-    sanitize: false,
-    smartLists: true,
-    smartypants: false,
-    xhtml: false
-  });
-
-
-  // parse the md to get front matter
-  // and the content without escaping characters
-  const { data, content } = grayMatter(post);
-
-  const html = marked(content, { renderer });
-
-  if (html) {
-    res.writeHead(200, {
-      "Content-Type": "application/json"
-    });
-
-    res.end(JSON.stringify({ html, ...data }));
-  } else {
-    res.writeHead(404, {
-      "Content-Type": "application/json"
-    });
-
-    res.end(
-      JSON.stringify({
-        message: `Not found`
-      })
-    );
-  }
+		res.end(JSON.stringify({
+			message: `Not found`
+		}));
+	}
 }

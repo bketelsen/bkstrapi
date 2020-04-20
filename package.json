@@ -19,9 +19,11 @@
     "youtube": "node youtube.js",
     "slides": "node getslides.js",
     "makeslides": "node makeslidemd.js",
-    "blog": "node getblog.js"
+    "blog": "node getblog.js",
+    "pubs": "node getpublications.js"
   },
   "dependencies": {
+    "@rollup/plugin-json": "^4.0.3",
     "apollo-boost": "^0.4.4",
     "axios": "^0.19.2",
     "compression": "^1.7.1",
@@ -37,6 +39,7 @@
     "remark": "^12.0.0",
     "remark-html": "^11.0.1",
     "remark-preset-lint-recommended": "^4.0.0",
+    "rollup-plugin-json": "^4.0.0",
     "run-p": "^0.0.0",
     "sirv": "^0.4.0",
     "svelte-apollo": "^0.3.0",

@@ -8,6 +8,13 @@ image:
   url: /uploads/02f8f223e6474aa69c1af7947004213b.png
   credit: Arrested DevOps Appearance on Krustlet
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

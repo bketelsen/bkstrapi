@@ -12,6 +12,13 @@ image:
   url: /uploads/9e06273c9ca041cabe7c91d3c1e56698.jpg
   credit: Byobu on WSL
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

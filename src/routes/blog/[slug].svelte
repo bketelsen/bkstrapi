@@ -16,7 +16,7 @@
 <script>
   import Bio from '../../components/Bio.svelte'
   import Figure from "../../components/PostFigure.svelte";
-
+import marked from 'marked';
   import moment from 'moment';
 
 export let post
@@ -88,7 +88,7 @@ export let post
 </svelte:head>
 
 <header>
-  <p>{moment(post.date).format("MMMM Do, YYYY")}</p>
+  <p>{moment(post.published_at).format("MMMM Do, YYYY")}</p>
   <h1>{post.title}</h1>
   <hr />
 </header>
@@ -98,7 +98,7 @@ export let post
   <Figure
     source="https://content.brian.dev{post.image.url}"
     alt={post.title} />
-    {@html post.html}
+    {@html marked(post.content)}
   </article>
   <hr />
   <Bio />

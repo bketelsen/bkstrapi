@@ -12,6 +12,13 @@ image:
   url: /uploads/27a382860fef4a198f01f5a6aba24d57.jpg
   credit: Caddy and Let's Encrypt
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

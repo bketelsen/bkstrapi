@@ -10,6 +10,13 @@ image:
   url: /uploads/15b96fc0d84a4c44b13ecb42d40ba1dc.jpg
   credit: Tasty Worms
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

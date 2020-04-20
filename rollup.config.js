@@ -10,6 +10,7 @@ import sveltePreprocess from 'svelte-preprocess';
 import autoprefixer from 'autoprefixer';
 import alias from 'rollup-plugin-alias';
 import path from 'path';
+import json from '@rollup/plugin-json';
 
 
 
@@ -96,6 +97,7 @@ export default {
 			}),
 			resolve(),
 			commonjs(),
+			json(),
          alias(aliasconfig),
 		],
 		external: Object.keys(pkg.dependencies).concat(

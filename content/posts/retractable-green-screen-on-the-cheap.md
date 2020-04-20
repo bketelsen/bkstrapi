@@ -10,6 +10,13 @@ image:
   url: /uploads/d44eca7292c345b9bdbf45055af291bf.jpeg
   credit: Retractable Green Screen On the Cheap
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

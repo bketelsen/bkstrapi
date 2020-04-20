@@ -14,6 +14,13 @@ image:
   url: /uploads/f51e0f5db0fe489db7031d4050dd1863.png
   credit: Getting Crazy with Windows Subsystem for Linux
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

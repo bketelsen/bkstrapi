@@ -27,7 +27,8 @@ axios
 					url: post.image.url,
 					credit: post.title,
 					credit_url: "#"
-				}
+				},
+				publication: post.publication
 			};
 
 			let yamlStr = yaml.safeDump(frontmatter);

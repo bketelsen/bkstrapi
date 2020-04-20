@@ -11,6 +11,13 @@ image:
   url: /uploads/ef1b9bd086524852a2b77e2dd61be021.jpg
   credit: 'Organizing Documents with Some AI, ML, and Elbow Grease '
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 

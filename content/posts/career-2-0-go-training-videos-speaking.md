@@ -12,6 +12,13 @@ image:
   url: /uploads/433d649028bd472d857765023239ac55.jpg
   credit: 'Career 2.0 - Go Training, Videos, Speaking'
   credit_url: '#'
+publication:
+  id: 1
+  name: brian.dev
+  description: brian.dev
+  base_url: 'https://brian.dev'
+  created_at: '2020-04-06T14:59:16.724Z'
+  updated_at: '2020-04-06T14:59:16.724Z'
 
 ---
 
